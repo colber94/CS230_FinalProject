@@ -4,7 +4,7 @@ Data/sentinel2/ca/T*/
 Data/landsat/
 Data/shapefiles/
 Data/archive/
-actual477_to_satmask.ipynb
 Data/FCCCSV/F477_2019_06_Actual_Area_Methodology_By_DBA_VerizonWireless.csv
 Data/FCCCSV/F477_2019_06_Actual_Area_Methodology_State_MD.csv
 Data/FCCCSV/F477_2019_06_Aggregated_by_State_MD.csv
+__pycache__/
