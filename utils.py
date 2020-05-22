@@ -33,10 +33,10 @@ def load_data(img_files, crop_size=None, resize=None, scale=None):
 
   return imgs
 
-def load_sat_imgs(sat_files, cell_files=None, crop_size=None, resize=None):
-  X = load_data(sat_files,crop_size=crop_size,resize=resize,scale=1./256.)
+def load_sat_imgs(sat_files, cell_files=None, crop_size=None, resize=None, scale=1./256.):
+  X = load_data(sat_files,crop_size=crop_size,resize=resize,scale=scale)
 
-  if cell_files:
+  if cell_files is not None:
     cell_arr = load_data(cell_files,crop_size=crop_size,resize=resize)
     X = np.concatenate((X,np.expand_dims(cell_arr,3)),3)
 
