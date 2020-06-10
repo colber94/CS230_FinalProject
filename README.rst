@@ -19,7 +19,7 @@ Much of the work was generating our own data for training. To get the training d
 
 
 .. figure:: https://github.com/colber94/CS230_FinalProject/blob/master/images/train.png
-   :alt: Segmentation of a galaxies.
+   :alt: TRAINING images
    :align: center
    :figclass: align-center
         
@@ -29,22 +29,44 @@ Much of the work was generating our own data for training. To get the training d
 For the ground truth, we leveraged collected data from the FCC in the form of shapefiles. We performed some data processing to create images with geographic areas broken down by coverage. For our final models we had ground-truth images with a **5 class mask**. 
 
 |
-|
+
 
 .. figure:: https://github.com/colber94/CS230_FinalProject/blob/master/images/truth.png
-   :alt: Segmentation of a galaxies.
+   :alt: truth
    :align: center
    
    
 After generating the data pipeline, we implemented this on data for six states: AK, AL, CA, CO, MS, OR. 
 
-To 
+The U-Net model is a CNN that is specifically used for image segementation tasks. It is broken into two parts: the downsampling and upsampling. The downsampling goes through various convultional blocks that include a convolution, dropout, a ReLU activation, and finally a max pool. THe upsampling go through a similar process that includes a convolution and  activation. 
+
+To train our model we started with the base implementation. To train the best model we experimented with many different paramters and hyperparameters. For our data, we experimented with the number of classes (2,4,5,10), the downsizing of the image (5490 to a variety of sizes (1280,2560, etc.)), and the size of the cropping (256, 512 etc.). A problem we ran into was the limited RAM even using AWS or Kaggle, which limited the size and resolution of the images. We also experimented with data augmentation techniques: flipping, rotating, etc., normalizing the input images. 
+
    
 .. figure:: https://github.com/colber94/CS230_FinalProject/blob/master/images/model.png
    :alt: Segmentation of a galaxies.
    :align: center
+   
+|
+For the model itself, we experimented with the learning rate, batch size, dropout, layer depth, number of root layers, and finally batch normalization. The original U-Net implementation did not have batch normalization, and upon implementing we saw an **increase in training rate** and **decrease in variance**. 
+|
 
+
+.. image:: https://github.com/colber94/CS230_FinalProject/blob/master/images/batch.png
+   :alt: Segmentation of a galaxies.
+   :align: center
+   
+|
+We were able to achieve a 97% categorical accuracy on the training set with almost 80% on the test set. 
+   
 .. image:: https://github.com/colber94/CS230_FinalProject/blob/master/images/results.png
    :alt: Segmentation of a galaxies.
    :align: center
 
+|
+Future work will include adding more data to decrease variance, training on the uncropped images, and possibly adding in extra layers into the U-Net model itself.
+
+We hope this can be very beneficial for helping to estimate access to mobile broadband and can be used by government institutions and ISP for infrastructure planning and policy-making.
+
+
+Please checkout the `youtube presentation <https://www.youtube.com/watch?v=eY6-gHf1iaQ&lc=Ugxb0CgbtMGqFKvdfjd4AaABAg>`_
