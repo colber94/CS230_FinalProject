@@ -6,6 +6,9 @@ Estimating Access to Mobile Broadband
         :target: https://colab.research.google.com/github/colber94/CS230_FinalProject/blob/master/colab_UNET.ipynb
         
 
+subtitle
+########
+
 This is a github repo for a **Stanford CS230** final project. This aim of this project was to take existing data on acutal access to mobile broadband throughout the US and create a Deep Learning model to estimate this using satellite imagery and known locations of cell towers.
 
 This project leverages a CNN model for image segmentation, called **U-Net**. You can find the original paper here
