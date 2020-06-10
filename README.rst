@@ -19,12 +19,12 @@ Much of the work was generating our own data for training. To get the training d
    :alt: Segmentation of a galaxies.
    :align: center
 
-
-
-
-
-
-
+|
+|
+|
+|
+|
+|
 
 For the ground truth, we leveraged collected data from the FCC in the form of shapefiles. We performed some data processing to create images with geographic areas broken down by coverage. For our final models we had ground-truth images with a **5 class mask**. 
 
