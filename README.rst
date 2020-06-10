@@ -27,7 +27,7 @@ Much of the work was generating our own data for training. To get the training d
    :alt: Segmentation of a galaxies.
    :align: center
 
-.. figure:: https://github.com/colber94/CS230_FinalProject/blob/master/images/results.png
+.. image:: https://github.com/colber94/CS230_FinalProject/blob/master/images/results.png
    :alt: Segmentation of a galaxies.
    :align: center
 
