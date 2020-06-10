@@ -14,15 +14,13 @@ This project leverages a CNN model for image segmentation, called **U-Net**. You
 To build and test our model, we used Kaggle, Google Colab, and AWS to leverage GPU's using Tensorflow. 
 
 Much of the work was generating our own data for training. To get the training data, we used satellite images from the Sentinel2, added on a fourth class with cell tower locations and then resized the original 5490x5490 pixel images to 1280x1280 before cropping to 256 x 256. 
+|
+|
 
 .. figure:: https://github.com/colber94/CS230_FinalProject/blob/master/images/train.png
    :alt: Segmentation of a galaxies.
    :align: center
 
-|
-|
-|
-|
 |
 |
 
