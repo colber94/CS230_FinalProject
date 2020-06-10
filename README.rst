@@ -35,13 +35,13 @@ For the ground truth, we leveraged collected data from the FCC in the form of sh
    :alt: truth
    :align: center
    
-   
+|   
 After generating the data pipeline, we implemented this on data for six states: AK, AL, CA, CO, MS, OR. 
 
 The U-Net model is a CNN that is specifically used for image segementation tasks. It is broken into two parts: the downsampling and upsampling. The downsampling goes through various convultional blocks that include a convolution, dropout, a ReLU activation, and finally a max pool. THe upsampling go through a similar process that includes a convolution and  activation. 
 
 To train our model we started with the base implementation. To train the best model we experimented with many different paramters and hyperparameters. For our data, we experimented with the number of classes (2,4,5,10), the downsizing of the image (5490 to a variety of sizes (1280,2560, etc.)), and the size of the cropping (256, 512 etc.). A problem we ran into was the limited RAM even using AWS or Kaggle, which limited the size and resolution of the images. We also experimented with data augmentation techniques: flipping, rotating, etc., normalizing the input images. 
-
+|
    
 .. figure:: https://github.com/colber94/CS230_FinalProject/blob/master/images/model.png
    :alt: Segmentation of a galaxies.
