@@ -14,6 +14,7 @@ This project leverages a CNN model for image segmentation, called **U-Net**. You
 To build and test our model, we used Kaggle, Google Colab, and AWS to leverage GPU's using Tensorflow. 
 
 Much of the work was generating our own data for training. To get the training data, we used satellite images from the Sentinel2, added on a fourth class with cell tower locations and then resized the original 5490x5490 pixel images to 1280x1280 before cropping to 256 x 256. 
+
 |
 |
 
@@ -25,6 +26,7 @@ Much of the work was generating our own data for training. To get the training d
 |
 
 For the ground truth, we leveraged collected data from the FCC in the form of shapefiles. We performed some data processing to create images with geographic areas broken down by coverage. For our final models we had ground-truth images with a **5 class mask**. 
+
 |
 |
 
