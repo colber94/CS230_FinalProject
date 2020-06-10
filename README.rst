@@ -68,4 +68,4 @@ Future work will include adding more data to decrease variance, training on the 
 We hope this can be very beneficial for helping to estimate access to mobile broadband and can be used by government institutions and ISP for infrastructure planning and policy-making.
 
 
-Please checkout the `youtube presentation <https://www.youtube.com/watch?v=eY6-gHf1iaQ&lc=Ugxb0CgbtMGqFKvdfjd4AaABAg>`_
+Please checkout the `Youtube Presentation <https://www.youtube.com/watch?v=eY6-gHf1iaQ&lc=Ugxb0CgbtMGqFKvdfjd4AaABAg>`_.
